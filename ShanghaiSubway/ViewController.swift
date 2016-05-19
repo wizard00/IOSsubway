@@ -8,11 +8,13 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     var locationRect = CGRect()
+    var StationF = StationFinder()
     
     
     override func viewDidLoad() {
@@ -34,14 +36,17 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
     }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        print(imageView.center.x,imageView.center.y)
+        //print(imageView.center.x,imageView.center.y)
         return self.imageView
     }
     
     func handleTap(sender: UITapGestureRecognizer){
         //CGPoint p
         let touchPoint = sender.locationInView(self.imageView)
-        print(touchPoint.x,touchPoint.y)
+        let SI = StationF.whichStation(touchPoint.x, Y: touchPoint.y)
+        if SI != -1 {
+            print("station ID", SI)
+        }
     }
     
 }
