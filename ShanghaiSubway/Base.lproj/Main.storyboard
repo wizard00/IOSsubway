@@ -25,11 +25,13 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="btd-js-bb3" secondAttribute="bottom" id="4Kl-Hr-eus"/>
                                     <constraint firstItem="btd-js-bb3" firstAttribute="top" secondItem="UdW-Fy-inL" secondAttribute="top" id="CRk-SL-hYI"/>
                                     <constraint firstItem="btd-js-bb3" firstAttribute="centerY" secondItem="UdW-Fy-inL" secondAttribute="centerY" id="Mbq-Nz-9gZ"/>
                                     <constraint firstItem="btd-js-bb3" firstAttribute="centerX" secondItem="UdW-Fy-inL" secondAttribute="centerX" id="YW8-A2-FJY"/>
                                     <constraint firstAttribute="trailing" secondItem="btd-js-bb3" secondAttribute="trailing" id="aQb-bS-Ppo"/>
                                     <constraint firstItem="btd-js-bb3" firstAttribute="leading" secondItem="UdW-Fy-inL" secondAttribute="leading" id="gQe-J8-dL6"/>
+                                    <constraint firstItem="btd-js-bb3" firstAttribute="top" secondItem="UdW-Fy-inL" secondAttribute="top" id="iuO-mD-Y6B"/>
                                     <constraint firstAttribute="bottom" secondItem="btd-js-bb3" secondAttribute="bottom" id="tc7-0r-sj7"/>
                                 </constraints>
                                 <connections>
@@ -48,11 +50,32 @@
                     <connections>
                         <outlet property="imageView" destination="btd-js-bb3" id="9QQ-x0-VzK"/>
                         <outlet property="scrollView" destination="UdW-Fy-inL" id="7QF-hK-ClS"/>
+                        <segue destination="PrZ-Pu-f8T" kind="popoverPresentation" identifier="showView" popoverAnchorView="btd-js-bb3" id="Jmg-Su-FXe">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="379"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="C3a-3H-9dP">
+            <objects>
+                <viewController id="PrZ-Pu-f8T" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nz7-oZ-k4t"/>
+                        <viewControllerLayoutGuide type="bottom" id="S9V-HJ-LJ9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1mt-lo-AFo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BPr-nn-Qd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="379"/>
         </scene>
     </scenes>
     <resources>

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -42,12 +42,43 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
     
     func handleTap(sender: UITapGestureRecognizer){
         //CGPoint p
+        //self.performSegueWithIdentifier("showView", sender: self)
         let touchPoint = sender.locationInView(self.imageView)
+        let TP2 = sender.locationInView(self.scrollView)
+        //self.performSegueWithIdentifier("showView", sender: sender)
+        print("in view",touchPoint.x,touchPoint.y)
+        //print("tp2",TP2.x,TP2.y)
         let SI = StationF.whichStation(touchPoint.x, Y: touchPoint.y)
         if SI != -1 {
+            self.performSegueWithIdentifier("showView", sender: sender)
             print("station ID", SI)
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showView" {
+            var vc = segue.destinationViewController as! UIViewController
+            
+            var controller = vc.popoverPresentationController
+            
+            let touchPoint = sender?.locationInView(self.imageView)
+            print("in view2",touchPoint?.x,touchPoint?.y)
+            if controller != nil {
+                controller?.delegate = self
+                controller?.sourceView = self.imageView
+                controller?.sourceRect = CGRectMake((touchPoint?.x)!, (touchPoint?.y)!, 0, 0)
+            }
+            
+        }
+        
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
+    
+    
+    
     
 }
 

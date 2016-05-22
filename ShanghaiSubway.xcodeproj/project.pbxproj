@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33B3F2E81CED87730039EBCB /* StationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3F2E71CED87730039EBCB /* StationControl.swift */; };
 		33D36EC51CE9A6360038B093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D36EC41CE9A6360038B093 /* AppDelegate.swift */; };
 		33D36EC71CE9A6360038B093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D36EC61CE9A6360038B093 /* ViewController.swift */; };
 		33D36ECA1CE9A6360038B093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D36EC81CE9A6360038B093 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33B3F2E71CED87730039EBCB /* StationControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationControl.swift; sourceTree = "<group>"; };
 		33D36EC11CE9A6360038B093 /* ShanghaiSubway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShanghaiSubway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D36EC41CE9A6360038B093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33D36EC61CE9A6360038B093 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				33D36EC41CE9A6360038B093 /* AppDelegate.swift */,
 				33D36EC61CE9A6360038B093 /* ViewController.swift */,
+				33B3F2E71CED87730039EBCB /* StationControl.swift */,
 				33D36EC81CE9A6360038B093 /* Main.storyboard */,
 				33D36ECB1CE9A6360038B093 /* Assets.xcassets */,
 				33D36ECD1CE9A6360038B093 /* LaunchScreen.storyboard */,
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B3F2E81CED87730039EBCB /* StationControl.swift in Sources */,
 				33D36EC71CE9A6360038B093 /* ViewController.swift in Sources */,
 				33D36EC51CE9A6360038B093 /* AppDelegate.swift in Sources */,
 			);
@@ -390,6 +394,7 @@
 				33D36EE01CE9A6360038B093 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33D36EE11CE9A6360038B093 /* Build configuration list for PBXNativeTarget "ShanghaiSubwayTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +403,7 @@
 				33D36EE31CE9A6360038B093 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
