@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		33B3F2E81CED87730039EBCB /* StationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B3F2E71CED87730039EBCB /* StationControl.swift */; };
 		33D36EC51CE9A6360038B093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D36EC41CE9A6360038B093 /* AppDelegate.swift */; };
-		33D36EC71CE9A6360038B093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D36EC61CE9A6360038B093 /* ViewController.swift */; };
+		33D36EC71CE9A6360038B093 /* MainMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D36EC61CE9A6360038B093 /* MainMapController.swift */; };
 		33D36ECA1CE9A6360038B093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D36EC81CE9A6360038B093 /* Main.storyboard */; };
 		33D36ECC1CE9A6360038B093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D36ECB1CE9A6360038B093 /* Assets.xcassets */; };
 		33D36ECF1CE9A6360038B093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D36ECD1CE9A6360038B093 /* LaunchScreen.storyboard */; };
 		33D36EDA1CE9A6360038B093 /* ShanghaiSubwayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D36ED91CE9A6360038B093 /* ShanghaiSubwayTests.swift */; };
+		33F9E8821CFBA4C900C63C8B /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F9E8811CFBA4C900C63C8B /* PopOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,7 @@
 		33B3F2E71CED87730039EBCB /* StationControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationControl.swift; sourceTree = "<group>"; };
 		33D36EC11CE9A6360038B093 /* ShanghaiSubway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShanghaiSubway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D36EC41CE9A6360038B093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		33D36EC61CE9A6360038B093 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33D36EC61CE9A6360038B093 /* MainMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapController.swift; sourceTree = "<group>"; };
 		33D36EC91CE9A6360038B093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33D36ECB1CE9A6360038B093 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33D36ECE1CE9A6360038B093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		33D36ED51CE9A6360038B093 /* ShanghaiSubwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShanghaiSubwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D36ED91CE9A6360038B093 /* ShanghaiSubwayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShanghaiSubwayTests.swift; sourceTree = "<group>"; };
 		33D36EDB1CE9A6360038B093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F9E8811CFBA4C900C63C8B /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				33D36EC41CE9A6360038B093 /* AppDelegate.swift */,
-				33D36EC61CE9A6360038B093 /* ViewController.swift */,
+				33D36EC61CE9A6360038B093 /* MainMapController.swift */,
 				33B3F2E71CED87730039EBCB /* StationControl.swift */,
 				33D36EC81CE9A6360038B093 /* Main.storyboard */,
+				33F9E8811CFBA4C900C63C8B /* PopOverViewController.swift */,
 				33D36ECB1CE9A6360038B093 /* Assets.xcassets */,
 				33D36ECD1CE9A6360038B093 /* LaunchScreen.storyboard */,
 				33D36ED01CE9A6360038B093 /* Info.plist */,
@@ -200,8 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F9E8821CFBA4C900C63C8B /* PopOverViewController.swift in Sources */,
 				33B3F2E81CED87730039EBCB /* StationControl.swift in Sources */,
-				33D36EC71CE9A6360038B093 /* ViewController.swift in Sources */,
+				33D36EC71CE9A6360038B093 /* MainMapController.swift in Sources */,
 				33D36EC51CE9A6360038B093 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

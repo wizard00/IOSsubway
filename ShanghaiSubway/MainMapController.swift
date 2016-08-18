@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate, UIPopoverPresentationControllerDelegate {
+class MainMapController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -20,12 +20,12 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap(_:)))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainMapController.handleTap(_:)))
         self.imageView.userInteractionEnabled = true
         self.imageView.addGestureRecognizer(tapGestureRecognizer)
-        self.scrollView.minimumZoomScale = 1.0
-        self.scrollView.maximumZoomScale = 10.0
-        locationRect = CGRectMake(0, 20, 20, 40)
+        self.scrollView.minimumZoomScale = 2.0
+        self.scrollView.maximumZoomScale = 8.0
+        //locationRect = CGRectMake(0, 20, 20, 40)
         
         
     }
@@ -49,7 +49,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
         print("in view",touchPoint.x,touchPoint.y)
         //print("tp2",TP2.x,TP2.y)
         let SI = StationF.whichStation(touchPoint.x, Y: touchPoint.y)
-        if SI != -1 {
+        if SI != "" {
             self.performSegueWithIdentifier("showView", sender: sender)
             print("station ID", SI)
         }
@@ -64,9 +64,12 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognize
             let touchPoint = sender?.locationInView(self.imageView)
             print("in view2",touchPoint?.x,touchPoint?.y)
             if controller != nil {
+                
                 controller?.delegate = self
                 controller?.sourceView = self.imageView
-                controller?.sourceRect = CGRectMake((touchPoint?.x)!, (touchPoint?.y)!, 0, 0)
+                controller?.sourceRect = CGRectMake((touchPoint?.x)!, (touchPoint?.y)!,0,0)
+                //controller?.preferredContentSize.height = 30
+                vc.preferredContentSize = CGSize(width: 200, height: 400)
             }
             
         }

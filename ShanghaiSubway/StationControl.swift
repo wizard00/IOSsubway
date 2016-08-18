@@ -33,14 +33,14 @@ class StationFinder{
         test.append(Station(ID: 2,Name: "虹桥",ImageName: "Pic2",StartTime: 6,EndTime: 20))
     }
 
-    func whichStation(X:CGFloat,Y:CGFloat) -> Int {
+    func whichStation(X:CGFloat,Y:CGFloat) -> String {
         if X>140 && X<150 && Y>280 && Y<290 {
-            return test[0].ID
+            return test[0].Name
         }
         if X>52 && X<58 && Y>323 && Y<330 {
-            return test[1].ID
+            return test[1].Name
         }
-        return -1
+        return ""
     }
     
     
